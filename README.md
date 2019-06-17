@@ -1,7 +1,7 @@
 ---
 services: Compute
 platforms: java
-author: lenala
+author: yaohaizh
 ---
 
 ## Getting Started with Compute - Manage Scale Set User Assigned MSI From Service Principal - in Java ##
