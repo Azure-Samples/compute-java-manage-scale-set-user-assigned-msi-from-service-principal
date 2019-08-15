@@ -4,12 +4,12 @@ languages:
 - java
 products:
 - azure
-services: Compute
-platforms: java
-author: yaohaizh
+extensions:
+- services: Compute
+- platforms: java
 ---
 
-## Getting Started with Compute - Manage Scale Set User Assigned MSI From Service Principal - in Java ##
+# Getting Started with Compute - Manage Scale Set User Assigned MSI From Service Principal - in Java #
 
 
   Azure Compute sample for assigning service identity to virtual machine scale set using newly created service principal
