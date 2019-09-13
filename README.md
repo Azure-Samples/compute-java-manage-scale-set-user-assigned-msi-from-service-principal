@@ -4,9 +4,8 @@ languages:
 - java
 products:
 - azure
-extensions:
-- services: Compute
-- platforms: java
+description: "Azure Compute sample for assigning service identity to virtual machine scale set using newly created service principal"
+urlFragment: compute-java-manage-scale-set-user-assigned-msi-from-service-principal
 ---
 
 # Getting Started with Compute - Manage Scale Set User Assigned MSI From Service Principal - in Java #
