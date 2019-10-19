@@ -4,6 +4,7 @@ languages:
 - java
 products:
 - azure
+- azure-virtual-machines
 description: "Azure Compute sample for assigning service identity to virtual machine scale set using newly created service principal."
 urlFragment: compute-java-manage-scale-set-user-assigned-msi-from-service-principal
 ---
