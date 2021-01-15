@@ -5,8 +5,8 @@ languages:
 products:
 - azure
 extensions:
-  services: Compute
-  platforms: java
+- services: Compute
+- platforms: java
 ---
 
 # Getting Started with Compute - Manage Scale Set User Assigned MSI From Service Principal - in Java #
