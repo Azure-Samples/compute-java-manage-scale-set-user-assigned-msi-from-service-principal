@@ -51,7 +51,7 @@ public final class ManageScaleSetUserAssignedMSIFromServicePrincipal {
         String subscription = "0b1f6471-1bf0-4dda-aec3-cb9272f09590";
 
         final String userName = "tirekicker";
-        final String password = com.azure.resourcemanager.samples.Utils.password();
+        final String sshPublicKey = Utils.sshPublicKey();
 
         AzureResourceManager azureResourceManager = null;
 
@@ -80,15 +80,14 @@ public final class ManageScaleSetUserAssignedMSIFromServicePrincipal {
                     .withoutPrimaryInternalLoadBalancer()
                     .withPopularLinuxImage(KnownLinuxVirtualMachineImage.UBUNTU_SERVER_16_04_LTS)
                     .withRootUsername(userName)
-                    .withRootPassword(password)
+                    .withSsh(sshPublicKey)
                     .create();
 
             // ============================================================
             // Create a managed service identity #1 and create a service principal. Configure the service principal to have 2 permissions, to update the scale set and assign the managed service identity #1 to the scale set
             servicePrincipal = authenticated.servicePrincipals().define(spName1)
-                    .withNewApplication("http://lenala.azure.com/ansp/" + spName1)
+                    .withNewApplication()
                     .definePasswordCredential("sppass")
-                    .withPasswordValue("StrongPass!12")
                     .attach()
                     .withNewRole(BuiltInRole.CONTRIBUTOR, resourceGroupId(virtualMachineScaleSet1.id()))
                     .create();
